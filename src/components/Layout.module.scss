@@ -72,6 +72,10 @@
     transform: translateY(-5rem);
     flex-wrap: wrap-reverse;
 
+    @include respond(phone) {
+       margin-top: 3rem;
+      }
+
     &_menutoggle{
         font-size: 8rem;
         color: #f1f1f1;
