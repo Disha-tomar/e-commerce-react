@@ -1,0 +1,296 @@
+@import "../../variables.scss";
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x:hidden;
+  
+}
+
+.header_container{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../../public/images/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_top{
+        justify-self: flex-start;
+        background-color: #2b2a29;
+        clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+        height: auto;
+        padding: 2.1rem 15%;
+
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+
+            li{
+                font-size: 1.6rem;
+                color: #f1f1f1;
+                padding: 0 1rem;
+                white-space: nowrap;
+            }
+        }
+
+        @include respond(phone) {
+            display: none;
+          }
+
+    }
+
+}
+
+.header_site_title{
+    // background-color: red;
+    color: #f1f1f1;
+    font-size: 4.4rem;
+    font-weight: 900;
+    transform: translateY(-1.8rem);
+
+    @include respond(phone) {
+        padding-top: 6rem;
+      }
+
+
+}
+
+
+.header_utility{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-5rem);
+    flex-wrap: wrap-reverse;
+
+    &_menutoggle{
+        font-size: 8rem;
+        color: #f1f1f1;
+        // padding: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+
+        @include respond(phone) {
+            display: none;
+          }
+
+    }
+
+    &_category{
+
+        margin: 1rem 0;
+
+       
+        select{
+            color: #fff;
+            background-color: #30302e;
+            border-color: #30302e;
+            border: 1px solid transparent;
+            padding: 0.5rem 0rem;
+            font-size: 1.6rem;
+            border-radius: 4px;
+            text-align: center;
+            white-space: nowrap;
+            margin-right: 3rem;
+
+        }
+        option{
+
+        }
+    }
+
+    &_search_group{
+        display: flex;
+        width: 40%;
+        margin-right: 2rem;
+        justify-content: center;
+
+        // @include respond(phone) {
+        //     margin: 0;
+        //   }
+        input{
+            width: 90%;
+            padding: .6rem 2rem;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 4px;
+            min-width: 20rem;
+           
+            // flex-grow: 1;
+        }
+
+        div{
+            font-size: 2.5rem;
+            color: #f1f1f1;
+            background-color: #f26522;
+            width: 4rem;
+            min-width: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+           
+        }
+    }
+
+    &_language {
+        background-color: #fff;
+        color: black;
+        border-radius: 5px;
+        font-size: 2.2rem;
+        padding: 0.7rem 1.8rem;
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        span:first-child{
+            margin-right: 1rem;
+        }
+
+        @include respond(phone) {
+            display: none;
+          }
+    }
+
+    &_cart_actions{
+        display: flex;
+
+        @include respond(phone) {
+            display: none;
+          }
+
+        &_icon{
+            font-size: 2rem;
+            color: white;
+            margin-right: 1rem;
+
+        }
+
+        &_title{
+            font-size: 1.6rem;
+            color: white;
+            margin-right: 1rem;
+
+        }
+        div{
+            display: flex;
+            align-items: center;
+
+           
+
+            span{
+              
+                color: white;
+            }
+        }
+
+       
+    }
+}
+
+.header_banner_container{
+    height:50%;
+    width: 100%;
+    // background-color: rgba(255, 0, 0, 0.11);
+    display: flex;
+    justify-content: center;
+    padding: 0 8% 6rem 8%;
+
+    &_carousel{
+        font-size: 2rem;
+        color: #2b2a29;
+        background-color: rgba(242, 222, 172, 0.80);
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(4rem);
+
+    }
+
+    &_banner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+        h1{
+            color: white;
+            font-size: 6rem;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: 4rem;
+              }
+
+         @include respond(tab-port) {
+                font-size: 3rem;
+              }
+
+              @include respond(phone) {
+                font-size: 2rem;
+              }
+
+
+
+        }
+
+        button {
+            // width: 100%;
+          
+            font-size: 1.6rem;
+            color: #ffffff;
+            background-color: #252525;
+            text-align: center;
+            padding: 1rem 4rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            // transform: translateY(-9rem);
+        }
+    }
+}
+
+.products_container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+   
+
+    h1 {
+        width: 100%;
+        font-size: 40px;
+        color: #30302e;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 4rem;
+
+    }
+
+    &_list{
+        display: flex;
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
